@@ -1,4 +1,8 @@
 *.jar
 *.war
 *.class
-idea
+.idea
+build/classes
+build/libs
+build/resources/
+build/tmp/
