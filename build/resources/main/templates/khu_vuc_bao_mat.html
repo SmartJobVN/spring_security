@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Đây là khu vực bảo mật</title>
+</head>
+<body>
+
+<h2>Đây là khu vực chỉ dành cho thành viên đã đăng nhập</h2>
+
+Bí quyết công nghệ sử dụng trong ứng dụng này:<br/>
+<ol>
+    <li>Spring Web MVC</li>
+    <li>Spring Boot</li>
+    <li>Spring Security</li>
+</ol>
+
+<h1 th:inline="text">Xin chào bạn [[${#httpServletRequest.remoteUser}]]!</h1>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Đăng xuất"/>
+</form>
+</body>
+</html>

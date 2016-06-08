@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Đăng nhập</title>
+</head>
+<body>
+<div th:if="${param.error}" style="color: red;">
+    Sai tên đăng nhập hoặc sai mật khẩu.
+</div>
+<div th:if="${param.logout}">
+    Bạn đã đăng xuất.
+</div>
+<form th:action="@{/login}" method="post">
+    <th:block>Tên đăng nhập</th:block>
+    <th:block><input type="text" name="username"/></th:block>
+
+    <th:block>Mật khẩu</th:block>
+    <th:block><input type="password" name="password"/></th:block>
+
+    <th:block><input type="submit" value="Đăng nhập"/></th:block>
+
+</form>
+</body>
+</html>
