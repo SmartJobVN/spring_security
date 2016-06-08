@@ -12,8 +12,8 @@ apply plugin: 'idea'
 apply plugin: 'spring-boot'
 
 jar {
-    baseName = 'gs-securing-web'
-    version = '0.1.0'
+    baseName = 'demo_spring_security'
+    version = '1.0.0'
 }
 
 repositories {
